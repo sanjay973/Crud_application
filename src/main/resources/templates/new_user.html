@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+<form th:action="@{/saveUser}" method="POST">
+    <div class="form-group">
+        <label for="name">Email Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
+    </div>
+    <div class="form-group">
+        <label for="fax">Email FAX</label>
+        <input type="text" class="form-control" id="fax" name="fax" placeholder="Enter FAX">
+    </div>
+    <div class="form-group">
+        <label for="landPhone">Email Landline</label>
+        <input type="text" class="form-control" id="landPhone" name="landPhone" placeholder="Enter Landline number">
+    </div>
+    <div class="form-group">
+        <label for="number">Email Mobile Number</label>
+        <input type="text" class="form-control" id="number" name="number" placeholder="Enter Contact Number">
+    </div>
+    <div class="form-group">
+        <label for="vat">Email VAT</label>
+        <input type="text" class="form-control" id="vat" name="vat" placeholder="Enter vat">
+    </div>
+    <div class="form-group">
+        <label for="web">Email WEB</label>
+        <input type="text" class="form-control" id="web" name="web" placeholder="Enter Web">
+    </div>
+    <button type="submit" class="btn btn-primary">Save User</button>
+</form>
+</div>
+</body>
+</html>

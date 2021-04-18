@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Fax</th>
+        <th>LandLine Number</th>
+        <th>Name</th>
+        <th>Number</th>
+        <th>Vat</th>
+        <th>Web</th>
+        <th>ACTION</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="data:${dataList}">
+        <td th:text="${data.id}"></td>
+        <td th:text="${data.email}"></td>
+        <td th:text="${data.fax}"></td>
+        <td th:text="${data.landPhone}"></td>
+        <td th:text="${data.name}"></td>
+        <td th:text="${data.number}"></td>
+        <td th:text="${data.vat}"></td>
+        <td th:text="${data.web}"></td>
+        <td>
+            <a class="btn btn-danger"  th:href="@{/delete/{id}(id=${data.id})}">Delete</a>
+            <a class="btn btn-info" th:href="@{/updateForm/{id}(id=${data.id})}">Update</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a class="btn btn-primary" th:href="@{/add}">Add a new User</a>
+</div>
+</body>
+</html>
